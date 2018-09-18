@@ -1,0 +1,4 @@
+file: index.html
+line: 28
+---
+  <link rel="manifest" href="/manifest.json">

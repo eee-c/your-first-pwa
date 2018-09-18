@@ -1,5 +1,0 @@
-file: service-worker.js
-line: 1
----
-⇥
-var dataCacheName = 'weatherData-v1';

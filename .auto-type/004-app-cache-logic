@@ -1,0 +1,18 @@
+file: scripts/app.js
+line: 167
+align: top
+---
+↓↓↓↓⇥
+    if ('caches' in window) {
+      caches.match(url).then(function(response) {
+        if (response) {
+          response.json().then(function updateFromCache(json) {
+            var results = json.query.results;
+            results.key = key;
+            results.label = label;
+            results.created = json.query.created;
+            app.updateForecastCard(results);
+          });
+        }
+      });
+    }

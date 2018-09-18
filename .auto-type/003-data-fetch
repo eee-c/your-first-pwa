@@ -1,0 +1,20 @@
+file: service-worker.js
+line: 48
+align: top
+---
+↓↓⇥
+  var dataUrl = 'https://query.yahooapis.com/v1/public/yql';
+  if (e.request.url.indexOf(dataUrl) > -1) {
+    // Cache then network
+    e.respondWith(
+      caches.open(dataCacheName).then(function(cache){
+        return fetch(e.request).then(function(response){
+          cache.put(e.request.url, response.clone());
+          return response;
+        });
+      })
+    );
+  }
+  else {
+    // Cache, falling back to the network↓↓↓↓↓
+  }↑↑↑↑↑⇤  ↓⇤  ↓⇤  ↓⇤  ↓⇤  ↓

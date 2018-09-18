@@ -1,7 +1,0 @@
-file: service-worker.js
-line: 13
----
-
-self.addEventListener('activate', function(e) {
-  console.log('[ServiceWorker] Activate');
-});
